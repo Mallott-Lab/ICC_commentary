@@ -17,10 +17,13 @@ This is code for the graphs for Mallott 2022 in Proc B.
 
 The following packages are used for this analysis:
 tidyverse 1.3.2
+ggarchery 0.4.1
+cowplot 1.1.1
 
 ```{r packages}
 library(tidyverse)
 library(ggarchery)
+library(cowplot)
 ```
 
 ## Panel A
@@ -36,9 +39,9 @@ points_a = tibble(Individual = c("A", "A", "A", "A", "B", "B",
                                  "B", "B", "C", "C", "C", "C"), 
                   Timepoint = c("1", "2", "3", "4", "1", "2", 
                                 "3", "4", "1", "2", "3", "4"),
-                  X = c(0.2, 0.45, 0.45, 0.225, 0.35, 0.6, 0.6, 0.375,
+                  MDS1 = c(0.2, 0.45, 0.45, 0.225, 0.35, 0.6, 0.6, 0.375,
                         0.55, 0.8, 0.8, 0.575),
-                  Y = c(0.2, 0.35, 0.15, 0.1, 0.75, 0.9, 0.7, 0.65,
+                  MDS2 = c(0.2, 0.35, 0.15, 0.1, 0.75, 0.9, 0.7, 0.65,
                         0.4, 0.55, 0.35, 0.3))
 arrows_a = tibble(Individual = c("A", "A", "A", "B", "B", "B", "C", "C", "C"),
                   xstart = c(0.2, 0.45, 0.45, 0.35, 0.6, 0.6, 
@@ -53,23 +56,25 @@ Create a scatterplot with arrows connecting points within the same individual. C
 
 ```{r panel_a}
 panel_A = ggplot(points_a) + 
-  geom_point(aes(x = X, y = Y, color = Individual, shape = Timepoint), 
+  geom_point(aes(x = MDS1, y = MDS2, color = Individual, shape = Timepoint), 
              size = 3) +
   scale_color_manual(values = c("#1ec93e", "#008ec8", "#4e3182")) +
   scale_shape_manual(values = c(15, 16, 17, 18)) +
-  geom_segment(data = arrows_a, 
+  geom_arrowsegment(data = arrows_a, 
                aes(x = xstart, xend = xend, y = ystart, yend = yend,
-                   color = Individual), 
-               arrow = arrow(angle = 20),
-               position = position_attractsegment(start_shave = 0.15, 
-                                                  end_shave = 0.15)) +
+                   color = Individual),
+               arrows = arrow(length = unit(0.1, "inches")),
+               position = position_attractsegment(start_shave = 0.035, 
+                                                  end_shave = 0.035,
+                                                  type_shave = "distance")) +
   xlim(c(0, 1)) +
   ylim(c(0, 1)) +
   theme_classic() + 
-  theme(axis.title.y=element_blank(),
+  theme(axis.title.y=element_text(size=rel(1.2)),
         axis.text.y=element_text(size=rel(1)),
-        axis.title.x=element_blank(), 
-        axis.text.x=element_text(size=rel(1)))
+        axis.title.x=element_text(size=rel(1.2)), 
+        axis.text.x=element_text(size=rel(1))) +
+  coord_fixed()
 panel_A
 ```
 
@@ -86,9 +91,9 @@ points_b = tibble(Individual = c("A", "A", "A", "A", "B", "B",
                                  "B", "B", "C", "C", "C", "C"), 
                   Timepoint = c("1", "2", "3", "4", "1", "2", 
                                 "3", "4", "1", "2", "3", "4"),
-                  X = c(0.2, 0.225, 0.45, 0.45, 0.35, 0.6, 0.375, 0.6,
+                  MDS1 = c(0.2, 0.225, 0.45, 0.45, 0.35, 0.6, 0.375, 0.6,
                         0.55, 0.8, 0.8, 0.575),
-                  Y = c(0.2, 0.1, 0.15, 0.35, 0.75, 0.7, 0.65, 0.9, 
+                  MDS2 = c(0.2, 0.1, 0.15, 0.35, 0.75, 0.7, 0.65, 0.9, 
                         0.4, 0.55, 0.35, 0.3))
 arrows_b = tibble(Individual = c("A", "A", "A", "B", "B", "B", "C", "C", "C"),
                   xstart = c(0.2, 0.225, 0.45, 0.35, 0.6, 0.375, 
@@ -103,23 +108,25 @@ Create a scatterplot with arrows connecting points within the same individual. C
 
 ```{r panel_b}
 panel_B = ggplot(points_b) + 
-  geom_point(aes(x = X, y = Y, color = Individual, shape = Timepoint), 
+  geom_point(aes(x = MDS1, y = MDS2, color = Individual, shape = Timepoint), 
              size = 3) +
   scale_color_manual(values = c("#1ec93e", "#008ec8", "#4e3182")) +
   scale_shape_manual(values = c(15, 16, 17, 18)) +
-  geom_segment(data = arrows_b, 
+  geom_arrowsegment(data = arrows_b, 
                aes(x = xstart, xend = xend, y = ystart, yend = yend,
-                   color = Individual), 
-               arrow = arrow(angle = 20),
-               position = position_attractsegment(start_shave = 0.15, 
-                                                  end_shave = 0.15)) +
+                   color = Individual),
+               arrows = arrow(length = unit(0.1, "inches")),
+               position = position_attractsegment(start_shave = 0.035, 
+                                                  end_shave = 0.035,
+                                                  type_shave = "distance")) +
   xlim(c(0, 1)) +
   ylim(c(0, 1)) +
   theme_classic() + 
-  theme(axis.title.y=element_blank(),
+  theme(axis.title.y=element_text(size=rel(1.2)),
         axis.text.y=element_text(size=rel(1)),
-        axis.title.x=element_blank(), 
-        axis.text.x=element_text(size=rel(1)))
+        axis.title.x=element_text(size=rel(1.2)), 
+        axis.text.x=element_text(size=rel(1))) +
+  coord_fixed()
 panel_B
 ```
 ## Panel C
@@ -135,9 +142,9 @@ points_c = tibble(Individual = c("A", "A", "A", "A", "B", "B",
                                  "B", "B", "C", "C", "C", "C"), 
                   Timepoint = c("1", "2", "3", "4", "1", "2", 
                                 "3", "4", "1", "2", "3", "4"),
-                  X = c(0.2, 0.45, 0.45, 0.225, 0.35, 0.6, 0.6, 0.375,
+                  MDS1 = c(0.2, 0.45, 0.45, 0.225, 0.35, 0.6, 0.6, 0.375,
                         0.55, 0.8, 0.8, 0.575),
-                  Y = c(0.2, 0.9, 0.4, 0.6, 0.8, 0.4, 0.2, 0.1, 
+                  MDS2 = c(0.2, 0.9, 0.4, 0.6, 0.8, 0.4, 0.2, 0.1, 
                         0.5, 0.7, 0.3, 0.9))
 arrows_c = tibble(Individual = c("A", "A", "A", "B", "B", "B", "C", "C", "C"),
                   xstart = c(0.2, 0.45, 0.45, 0.35, 0.6, 0.6, 
@@ -152,23 +159,25 @@ Create a scatterplot with arrows connecting points within the same individual. C
 
 ```{r panel_c}
 panel_C = ggplot(points_c) + 
-  geom_point(aes(x = X, y = Y, color = Individual, shape = Timepoint), 
+  geom_point(aes(x = MDS1, y = MDS2, color = Individual, shape = Timepoint), 
              size = 3) +
   scale_color_manual(values = c("#1ec93e", "#008ec8", "#4e3182")) +
   scale_shape_manual(values = c(15, 16, 17, 18)) +
-  geom_segment(data = arrows_c, 
+  geom_arrowsegment(data = arrows_c, 
                aes(x = xstart, xend = xend, y = ystart, yend = yend,
-                   color = Individual), 
-               arrow = arrow(angle = 20),
-               position = position_attractsegment(start_shave = 0.15, 
-                                                  end_shave = 0.15)) +
+                   color = Individual),
+               arrows = arrow(length = unit(0.1, "inches")),
+               position = position_attractsegment(start_shave = 0.035, 
+                                                  end_shave = 0.035,
+                                                  type_shave = "distance")) +
   xlim(c(0, 1)) +
   ylim(c(0, 1)) +
   theme_classic() + 
-  theme(axis.title.y=element_blank(),
+  theme(axis.title.y=element_text(size=rel(1.2)),
         axis.text.y=element_text(size=rel(1)),
-        axis.title.x=element_blank(), 
-        axis.text.x=element_text(size=rel(1)))
+        axis.title.x=element_text(size=rel(1.2)), 
+        axis.text.x=element_text(size=rel(1))) +
+  coord_fixed()
 panel_C
 ```
 
@@ -185,9 +194,9 @@ points_d = tibble(Individual = c("A", "A", "A", "A", "B", "B",
                                  "B", "B", "C", "C", "C", "C"), 
                   Timepoint = c("1", "2", "3", "4", "1", "2", 
                                 "3", "4", "1", "2", "3", "4"),
-                  X = c(0.2, 0.225, 0.45, 0.45, 0.35, 0.6, 0.375, 0.6,
+                  MDS1 = c(0.2, 0.225, 0.45, 0.45, 0.35, 0.6, 0.375, 0.6,
                         0.55, 0.8, 0.8, 0.575),
-                  Y = c(0.6, 0.2, 0.3, 0.9, 0.4, 0.8, 0.3, 0.15,
+                  MDS2 = c(0.6, 0.2, 0.3, 0.9, 0.4, 0.8, 0.3, 0.15,
                         0.7, 0.8, 0.5, 0.3))
 arrows_d = tibble(Individual = c("A", "A", "A", "B", "B", "B", "C", "C", "C"),
                   xstart = c(0.2, 0.225, 0.45, 0.35, 0.6, 0.375, 
@@ -202,24 +211,84 @@ Create a scatterplot with arrows connecting points within the same individual. C
 
 ```{r panel_d}
 panel_D = ggplot(points_d) + 
-  geom_point(aes(x = X, y = Y, color = Individual, shape = Timepoint), 
+  geom_point(aes(x = MDS1, y = MDS2, color = Individual, shape = Timepoint), 
              size = 3) +
   scale_color_manual(values = c("#1ec93e", "#008ec8", "#4e3182")) +
   scale_shape_manual(values = c(15, 16, 17, 18)) +
-  geom_segment(data = arrows_d, 
+  geom_arrowsegment(data = arrows_d, 
                aes(x = xstart, xend = xend, y = ystart, yend = yend,
-                   color = Individual), 
-               arrow = arrow(angle = 20),
-               position = position_attractsegment(start_shave = 0.15, 
-                                                  end_shave = 0.15)) +
+                   color = Individual),
+               arrows = arrow(length = unit(0.1, "inches")),
+               position = position_attractsegment(start_shave = 0.035, 
+                                                  end_shave = 0.035,
+                                                  type_shave = "distance")) +
   xlim(c(0, 1)) +
   ylim(c(0, 1)) +
   theme_classic() + 
-  theme(axis.title.y=element_blank(),
+  theme(axis.title.y=element_text(size=rel(1.2)),
         axis.text.y=element_text(size=rel(1)),
-        axis.title.x=element_blank(), 
-        axis.text.x=element_text(size=rel(1)))
+        axis.title.x=element_text(size=rel(1.2)), 
+        axis.text.x=element_text(size=rel(1))) +
+  coord_fixed()
 panel_D
 ```
 
-##
+## Panel E
+
+This graph shows the change in MDS1 over time for each individual where the gut microbiome responds similarly to environmental change in each individual.
+
+```{r panel_e}
+panel_E = ggplot(points_a, aes(x = Timepoint, y = MDS1, group = Individual)) +
+  geom_line(aes(color = Individual)) +
+  geom_point(aes(color = Individual)) + 
+  scale_color_manual(values = c("#1ec93e", "#008ec8", "#4e3182")) +
+  theme_classic() + 
+  theme(axis.title.y=element_text(size=rel(1.2)),
+        axis.text.y=element_text(size=rel(1)),
+        axis.title.x=element_text(size=rel(1.2)), 
+        axis.text.x=element_text(size=rel(1)))
+panel_E
+```
+## Panel F
+
+This graph shows the change in MDS1 over time for each individual where the gut microbiome does not respond similarly to environmental change in each individual.
+
+```{r panel_f}
+panel_F = ggplot(points_b, aes(x = Timepoint, y = MDS1, group = Individual)) +
+  geom_line(aes(color = Individual)) +
+  geom_point(aes(color = Individual)) + 
+  scale_color_manual(values = c("#1ec93e", "#008ec8", "#4e3182")) +
+  theme_classic() + 
+  theme(axis.title.y=element_text(size=rel(1.2)),
+        axis.text.y=element_text(size=rel(1)),
+        axis.title.x=element_text(size=rel(1.2)), 
+        axis.text.x=element_text(size=rel(1)))
+panel_F
+```
+
+## Combined figure
+
+All panels are stitched together into one figure.
+
+```{r fig1}
+legend = get_legend(panel_A)
+
+tiff(file="fig1.tif", 
+     res=300, width=8, height=10, units="in")
+graphs = plot_grid(panel_A + theme(legend.position = "none"), 
+                  panel_B + theme(legend.position = "none"), 
+                  panel_C + theme(legend.position = "none"), 
+                  panel_D + theme(legend.position = "none"), 
+                  panel_E + theme(legend.position = "none"), 
+                  panel_F + theme(legend.position = "none"), 
+                  nrow = 3, ncol = 2, 
+                  labels = c("A", "B", "C", "D", "E", "F"),
+                  align = "hv")
+plot1 = plot_grid(graphs, legend, nrow = 1, ncol = 2, rel_widths = c(0.9, 0.1))
+dev.off()
+
+setEPS()
+postscript(file="fig1.eps", width=8, height=10, paper = "special")
+plot1
+dev.off()
+```
