@@ -15,6 +15,18 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs483">
+    <rect
+       x="411.18583"
+       y="681.91149"
+       width="144.99114"
+       height="46.442473"
+       id="rect821" />
+    <rect
+       x="271.8584"
+       y="260.53097"
+       width="103.07964"
+       height="33.9823"
+       id="rect709" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath497">
@@ -127,6 +139,24 @@
          d="m 3308.6,337.898 h 2396.6 v 2007.3 H 3308.6 Z"
          id="path1367" />
     </clipPath>
+    <rect
+       x="411.18582"
+       y="681.9115"
+       width="144.99113"
+       height="46.442474"
+       id="rect821-9" />
+    <rect
+       x="411.18582"
+       y="681.9115"
+       width="144.99113"
+       height="46.442474"
+       id="rect821-5" />
+    <rect
+       x="411.18582"
+       y="681.9115"
+       width="144.99113"
+       height="46.442474"
+       id="rect821-3" />
   </defs>
   <sodipodi:namedview
      id="namedview481"
@@ -140,12 +170,12 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="0.88281252"
-     inkscape:cx="498.97344"
-     inkscape:cy="495.57521"
+     inkscape:cx="576.56636"
+     inkscape:cy="568.07078"
      inkscape:window-width="1413"
      inkscape:window-height="1245"
      inkscape:window-x="2246"
-     inkscape:window-y="38"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="g487">
     <inkscape:page
@@ -154,6 +184,16 @@
        id="page485"
        width="1152"
        height="960" />
+    <sodipodi:guide
+       position="376.07079,638.30089"
+       orientation="1,0"
+       id="guide651"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="748.74335,591.85842"
+       orientation="1,0"
+       id="guide653"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <g
      id="g487"
@@ -2221,5 +2261,53 @@
            x="80.378426"
            y="-695.47778">Individualized Response</tspan></text>
     </a>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.75000002,0,0,-0.75000002,-129.9823,1037.7345)"
+       id="text819"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821);fill:#000000"><tspan
+         x="411.18555"
+         y="696.32418"
+         id="tspan1641">High Individual ICC
+</tspan><tspan
+         x="411.18555"
+         y="716.32418"
+         id="tspan1643">High Timepoint ICC</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.75000002,0,0,-0.75000002,149.08265,1037.6465)"
+       id="text819-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821-9);fill:#000000"><tspan
+         x="411.18555"
+         y="696.32418"
+         id="tspan1645">High Individual ICC
+</tspan><tspan
+         x="411.18555"
+         y="716.32418"
+         id="tspan1647">Low Timepoint ICC</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.75000002,0,0,-0.75000002,149.08265,804.86779)"
+       id="text819-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821-5);fill:#000000"><tspan
+         x="411.18555"
+         y="696.32418"
+         id="tspan1649">Low Individual ICC
+</tspan><tspan
+         x="411.18555"
+         y="716.32418"
+         id="tspan1651">Low Timepoint ICC</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.75000002,0,0,-0.75000002,-129.9823,804.86778)"
+       id="text819-08"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821-3);fill:#000000"><tspan
+         x="411.18555"
+         y="696.32418"
+         id="tspan1653">Low Individual ICC
+</tspan><tspan
+         x="411.18555"
+         y="716.32418"
+         id="tspan1655">High Timepoint ICC</tspan></text>
   </g>
 </svg>
