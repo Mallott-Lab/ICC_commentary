@@ -171,10 +171,10 @@
      showguides="true"
      inkscape:zoom="0.88281252"
      inkscape:cx="576.56636"
-     inkscape:cy="568.07078"
+     inkscape:cy="569.20353"
      inkscape:window-width="1413"
      inkscape:window-height="1245"
-     inkscape:window-x="2246"
+     inkscape:window-x="2242"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="g487">
@@ -2265,49 +2265,49 @@
        xml:space="preserve"
        transform="matrix(0.75000002,0,0,-0.75000002,-129.9823,1037.7345)"
        id="text819"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821);fill:#000000"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821);display:inline;fill:#000000"><tspan
          x="411.18555"
          y="696.32418"
-         id="tspan1641">High Individual ICC
+         id="tspan3393">High Individual ICC
 </tspan><tspan
          x="411.18555"
          y="716.32418"
-         id="tspan1643">High Timepoint ICC</tspan></text>
+         id="tspan3395">High Timepoint ICC</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75000002,0,0,-0.75000002,149.08265,1037.6465)"
        id="text819-0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821-9);fill:#000000"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821-9);display:inline;fill:#000000"><tspan
          x="411.18555"
          y="696.32418"
-         id="tspan1645">High Individual ICC
+         id="tspan3397">High Individual ICC
 </tspan><tspan
          x="411.18555"
          y="716.32418"
-         id="tspan1647">Low Timepoint ICC</tspan></text>
+         id="tspan3399">Low Timepoint ICC</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75000002,0,0,-0.75000002,149.08265,804.86779)"
        id="text819-6"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821-5);fill:#000000"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821-5);display:inline;fill:#000000"><tspan
          x="411.18555"
          y="696.32418"
-         id="tspan1649">Low Individual ICC
+         id="tspan3401">Low Individual ICC
 </tspan><tspan
          x="411.18555"
          y="716.32418"
-         id="tspan1651">Low Timepoint ICC</tspan></text>
+         id="tspan3403">Low Timepoint ICC</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75000002,0,0,-0.75000002,-129.9823,804.86778)"
        id="text819-08"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821-3);fill:#000000"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect821-3);display:inline;fill:#000000"><tspan
          x="411.18555"
          y="696.32418"
-         id="tspan1653">Low Individual ICC
+         id="tspan3405">Low Individual ICC
 </tspan><tspan
          x="411.18555"
          y="716.32418"
-         id="tspan1655">High Timepoint ICC</tspan></text>
+         id="tspan3407">High Timepoint ICC</tspan></text>
   </g>
 </svg>
